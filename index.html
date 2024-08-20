@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <div class="container">
+        <div class="container container-flex">
             <h1>EBAC Motors</h1>
             <div class="menu-hamburguer">
                 <span></span>
@@ -48,7 +48,68 @@
         <img src="./images/slide2.png" alt="Carro da BMW">
         <img src="./images/slide3.png" alt="Carro da Ford">
     </div>
-
+    <section id="sobre-a-loja">
+        <div class="container container-flex">
+            <img src="./images/loja.jpg" alt="Imagem da Loja da EBAC MOTORS">
+            <div>
+                <h2>Sobre a EBAC MOTORS</h2>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint a repellat doloribus cumque libero architecto unde ea soluta. Culpa ducimus unde incidunt fugiat dolor minima repellendus, laborum suscipit nostrum non.</p>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab repudiandae, repellat, qui sapiente facilis adipisci suscipit ducimus unde vitae fuga esse dolorum exercitationem iure odit aliquam maxime illo nesciunt laborum.</p>
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container">
+            <h2>Em destaque</h2>
+            <ul class="container-flex lista-veiculos">
+                <li>
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <p>
+                        Câmbio automático, 4 portas, vidros e travas elétricas
+                    </p>
+                    <strong>R$75.000,00</strong>
+                    <button type="button">Tenho interesse</button>         
+                </li>
+                <li>
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <p>
+                        Câmbio automático, 4 portas, vidros e travas elétricas
+                    </p>
+                    <strong>R$75.000,00</strong>
+                    <button type="button">Tenho interesse</button>                       
+                </li>
+                <li>
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <p>
+                        Câmbio automático, 4 portas, vidros e travas elétricas
+                    </p>
+                    <strong>R$75.000,00</strong>
+                    <button type="button">Tenho interesse</button>
+                </li>
+                <li>
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <p>
+                        Câmbio automático, 4 portas, vidros e travas elétricas
+                    </p>
+                    <strong>R$75.000,00</strong>
+                    <button type="button">Tenho interesse</button>
+                </li>
+                <li>
+                    <img src="./images/carro-bmw.png" alt="">
+                    <h3>Carro BMW</h3>
+                    <p>
+                        Câmbio automático, 4 portas, vidros e travas elétricas
+                    </p>
+                    <strong>R$75.000,00</strong>
+                    <button type="button">Tenho interesse</button>
+                </li>
+            </ul>
+        </div>
+    </section>
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
@@ -57,11 +118,9 @@
 <script>
     $(document).ready(function(){
         $('#carousel-imagens').slick({
-            autoplay: true
-        }
-
-        )
-
+            autoplay: true})
+        $('.menu-hamburguer').click(function(){
+            $('nav').slideToggle();})
 
 
     })

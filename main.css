@@ -3,7 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 .container {
@@ -13,7 +13,6 @@
 }
 
 header > .container {
-    display: flex;
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
@@ -27,6 +26,7 @@ header {
 nav {
     background-color: #575fcf;
     padding: 16px 0;
+    display: none;
 }
 
 nav li{
@@ -45,6 +45,7 @@ nav li a{
 
 .menu-hamburguer {
     width: 32px;
+    cursor: pointer;
 }
 
 .menu-hamburguer span {
@@ -53,4 +54,35 @@ nav li a{
     height: 2px;
     width: 100%;
     background-color: white;
+}
+
+.container-flex {
+    display: flex;
+}
+
+#sobre-a-loja img{
+    width: 800px;
+    margin-right: 24px;
+}
+
+section {
+    padding: 48px 0;
+}
+
+section h2 {
+    margin-bottom: 16px;
+}
+.lista-veiculos {
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.lista-veiculos li {
+    list-style: none;
+    max-width: 30%;
+}
+.lista-veiculos li img {
+    max-width: 100%;
+}
+.lista-veiculos li h3 {
+    margin: 16px 0;
 }
