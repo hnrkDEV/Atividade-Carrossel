@@ -64,7 +64,9 @@ nav li a{
     width: 800px;
     margin-right: 24px;
 }
-
+#sobre-a-loja p {
+    margin-bottom: 16px;
+}
 section {
     padding: 48px 0;
 }
@@ -85,4 +87,26 @@ section h2 {
 }
 .lista-veiculos li h3 {
     margin: 16px 0;
+}
+.lista-veiculos li button {
+    display: block;
+    width: 100%;
+    padding: 8px 0;
+    border: none;
+    background-color: #119759;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    font-style: italic;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.price {
+    margin: 16px 0;
+    display: block;
+}
+.price del {
+    color: #ccc;
+    font-size: 14px;
 }
