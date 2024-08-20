@@ -5,24 +5,28 @@
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
 }
-
 .container {
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
-
-header > .container {
+header > .container,
+footer > .container {
     justify-content: space-between;
     align-items: center;
     padding-bottom: 16px;
 }
-header {
+header, footer {
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
 }
-
+header {
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
 nav {
     background-color: #575fcf;
     padding: 16px 0;
@@ -88,7 +92,7 @@ section h2 {
 .lista-veiculos li h3 {
     margin: 16px 0;
 }
-.lista-veiculos li button {
+button {
     display: block;
     width: 100%;
     padding: 8px 0;
@@ -101,7 +105,6 @@ section h2 {
     cursor: pointer;
     border-radius: 5px;
 }
-
 .price {
     margin: 16px 0;
     display: block;
@@ -110,3 +113,32 @@ section h2 {
     color: #ccc;
     font-size: 14px;
 }
+.form-campo {
+    margin-bottom: 16px;
+}
+.form-campo label {
+    font-weight: bold;
+    display: block;
+}
+.form-campo input, .form-campo textarea {
+    width: 100%;
+    display: block;
+    padding: 8px;
+}
+.form-campo textarea{
+    resize: none;
+    height: 120px;
+}
+form {
+    max-width: 360px;
+}
+form button {
+    max-width: 120px;
+}
+footer li {
+    margin-left: 16px;
+}
+footer li img {
+    height: 32px;
+}
+
