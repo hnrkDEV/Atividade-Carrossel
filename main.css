@@ -21,7 +21,7 @@ header, footer {
     padding-top: 16px;
     color: #fff;
 }
-header {
+header{
     position: sticky;
     top: 0;
     left: 0;
@@ -32,7 +32,6 @@ nav {
     padding: 16px 0;
     display: none;
 }
-
 nav li{
     list-style: none;
     display: inline;
@@ -41,17 +40,14 @@ nav li{
     font-weight: bold;
     text-transform: uppercase;
 }
-
 nav li a{
     color: #fff;
     text-decoration: none;
 }
-
 .menu-hamburguer {
     width: 32px;
     cursor: pointer;
 }
-
 .menu-hamburguer span {
     display: block;
     margin-bottom: 4px;
@@ -59,11 +55,9 @@ nav li a{
     width: 100%;
     background-color: white;
 }
-
 .container-flex {
     display: flex;
 }
-
 #sobre-a-loja img{
     width: 800px;
     margin-right: 24px;
