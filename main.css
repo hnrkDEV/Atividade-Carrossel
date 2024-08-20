@@ -7,11 +7,12 @@
 html {
     overflow-x: hidden;
 }
-.container {
+.container {  /*AQUI NO CONTAINER, JÁ DEFINE A LARGURA MÁXIMA DE QUEM TÁ USANDO A CLASSE E USA TODO O TAMANHO DA LARGURA*/
     max-width: 1024px;
     width: 100%;
     margin: 0 auto;
 }
+
 header > .container,
 footer > .container {
     justify-content: space-between;
@@ -22,7 +23,7 @@ header, footer {
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
-}
+} 
 header {
     position: sticky;
     top: 0;

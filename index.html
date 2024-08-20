@@ -23,7 +23,6 @@
                 <span></span>
             </div>
         </div>
-
         <nav>
             <div class="container">
                 <ul>
@@ -60,6 +59,7 @@
             </div>
         </div>
     </section>
+
     <section id="em-destaque">
         <div class="container">
             <h2>Em destaque</h2>
@@ -122,6 +122,7 @@
             </ul>
         </div>
     </section>
+
     <section id="em-promocao">
         <div class="container">
             <h2>Promoção</h2>
@@ -189,34 +190,36 @@
             </ul>
         </div>
     </section>
+
     <section class="container" id="entre-em-contato">
         <h2>Entre em contato</h2>
         <form>
             <div class="form-campo">
                 <label for="nome">Nome:</label>
-                <input type="text" id="nome">
+                <input type="text" id="nome" name="nome">
             </div>
             <div class="form-campo">
                 <label for="telefone">Telefone:</label>
-                <input type="tel" id="telefone">
+                <input type="tel" id="telefone" name="telefone">
             </div>
             <div class="form-campo">
                 <label for="emaail">E-mail:</label>
-                <input type="email" id="email">
+                <input type="email" id="email" name="email">
             </div>
             <div class="form-campo">
                 <label for="veiculo-interesse">Veículo de interesse:</label>
-                <input type="text" id="veiculo-interesse">
+                <input type="text" id="veiculo-interesse" name="veiculo-interesse">
             </div>
             <div class="form-campo">
                 <label for="mensagem">Mensgem:</label>
-                <textarea name="" id=""></textarea>
+                <textarea name="" id="" name="mensagem"></textarea>
             </div>
             <button type="submit">Enviar</button>
         </form>
     </section>
+
     <footer>
-        <div class="container container-flex">
+        <div class="container container-flex"> 
             <P>2024 &copy; HNR MOTORS - TODOS OS DIREITOS RESERVADOS</P>
             <ul class="container-flex">
                 <li>
@@ -237,25 +240,40 @@
             </ul>
         </div>
     </footer>
-
-
-
-
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
     <script src="./JS/jquery.mask.min.js"></script>
+    <script src="./JS/jquery.validate.min.js"></script>
+    <script src="./JS/messages_pt_BR.min.js"></script>
 </body>
 
 <script>
     $(document).ready(function(){
-        $('#carousel-imagens').slick({
+        $('#carousel-imagens').slick({ //Função slick adiciona a função de carrossel à Div que está encobrindo as imagens
             autoplay: true})
         $('.menu-hamburguer').click(function(){
-            $('nav').slideToggle();})
+            $('nav').slideToggle();}) //Função slideToggle serve para 
         $('#telefone').mask('(00) 00000-0000', {
             placeholder: '(00) 00000-0000'
         })
+        $('form').validate({ //função do plugin do JQuery que serve para validar os valores
+            rules: { //aqui você passa a função regras
+              nome:{required: true //e assim vai inserindo as regras, na qual o nome está como requisitado
+              },
+              email:{required: true, email: true //e o E-mail está além de requisitado está com uma formatção do plugin para reconhecer e-mail
+              },
+              telefone:{required: true
+              }
+            },
+            messages: { //aqui você altera a mensagem de alerta do plugin
+                nome: 'por favor, insira o seu nome',
+                telefone: 'por favor, digite seu número de celular',
+                email: 'por favor, digite seu e-mail'
+            }
+        })
+        
+
     })
 </script>
 </html>
