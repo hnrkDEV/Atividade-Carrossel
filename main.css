@@ -3,6 +3,8 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Roboto', sans-serif;
+}
+html {
     overflow-x: hidden;
 }
 .container {
@@ -21,12 +23,14 @@ header, footer {
     padding-top: 16px;
     color: #fff;
 }
-header{
+header {
     position: sticky;
     top: 0;
-    left: 0;
     z-index: 1;
+    left: 0;
+    right: 0;
 }
+
 nav {
     background-color: #575fcf;
     padding: 16px 0;
