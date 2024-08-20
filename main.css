@@ -130,6 +130,9 @@ button {
 form {
     max-width: 360px;
 }
+form input {
+    outline: none;
+}
 form button {
     max-width: 120px;
 }

@@ -28,16 +28,16 @@
             <div class="container">
                 <ul>
                     <li>
-                        <a href="#">Sobre</a>
+                        <a href="#sobre-a-loja">Sobre</a>
                     </li>
                     <li>
-                        <a href="#">Em destaque</a>
+                        <a href="#em-destaque">Em destaque</a>
                     </li>
                     <li>
-                        <a href="#">Promoções</a>
+                        <a href="#em-promocao">Promoções</a>
                     </li>
                     <li>
-                        <a href="#">Contato</a>
+                        <a href="#entre-em-contato">Contato</a>
                     </li>
                 </ul>
             </div>
@@ -60,7 +60,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section id="em-destaque">
         <div class="container">
             <h2>Em destaque</h2>
             <ul class="container-flex lista-veiculos">
@@ -122,7 +122,7 @@
             </ul>
         </div>
     </section>
-    <section>
+    <section id="em-promocao">
         <div class="container">
             <h2>Promoção</h2>
             <ul class="container-flex lista-veiculos">
@@ -189,7 +189,7 @@
             </ul>
         </div>
     </section>
-    <section class="container">
+    <section class="container" id="entre-em-contato">
         <h2>Entre em contato</h2>
         <form>
             <div class="form-campo">
@@ -244,6 +244,7 @@
     <script type="text/javascript" src="https://code.jquery.com/jquery-1.11.0.min.js"></script>
     <script type="text/javascript" src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script src="./JS/jquery.mask.min.js"></script>
 </body>
 
 <script>
@@ -252,7 +253,9 @@
             autoplay: true})
         $('.menu-hamburguer').click(function(){
             $('nav').slideToggle();})
-
+        $('#telefone').mask('(00) 00000-0000', {
+            placeholder: '(00) 00000-0000'
+        })
     })
 </script>
 </html>
