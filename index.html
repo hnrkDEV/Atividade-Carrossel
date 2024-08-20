@@ -203,16 +203,16 @@
                 <input type="tel" id="telefone" name="telefone">
             </div>
             <div class="form-campo">
-                <label for="emaail">E-mail:</label>
+                <label for="email">E-mail:</label>
                 <input type="email" id="email" name="email">
             </div>
             <div class="form-campo">
-                <label for="veiculo-interesse">Veículo de interesse:</label>
-                <input type="text" id="veiculo-interesse" name="veiculo-interesse">
+                <label for="veiculoDeInteresse">Veículo de interesse:</label>
+                <input type="text" id="veiculoDeInteresse" name="veiculoDeInteresse">
             </div>
             <div class="form-campo">
                 <label for="mensagem">Mensgem:</label>
-                <textarea name="" id="" name="mensagem"></textarea>
+                <textarea name="" id="mensagem" name="mensagem"></textarea>
             </div>
             <button type="submit">Enviar</button>
         </form>
@@ -264,16 +264,32 @@
               email:{required: true, email: true //e o E-mail está além de requisitado está com uma formatção do plugin para reconhecer e-mail
               },
               telefone:{required: true
+              },
+              veiculoDeInteresse:{
+                required: true
+              },
+              mensagem: {
+                required: false
               }
             },
             messages: { //aqui você altera a mensagem de alerta do plugin
                 nome: 'por favor, insira o seu nome',
                 telefone: 'por favor, digite seu número de celular',
-                email: 'por favor, digite seu e-mail'
+                email: 'por favor, digite seu e-mail',
+                veiculoDeInteresse: 'por favor, escolha o veiculo'
+            },
+            submitHandler: function(form) {
+                console.log(form)
+                
+            },
+            invalidHandler: function(evento, validador){
+                let camposIncorretos = validador.numberOfInvalids();
+                console.log(camposIncorretos);
+                if (camposIncorretos) {
+                    alert(`Existem ${camposIncorretos} campos incorretos`)
+                }
             }
         })
-        
-
     })
 </script>
 </html>

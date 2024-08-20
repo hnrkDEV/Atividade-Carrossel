@@ -82,8 +82,8 @@ section h2 {
     gap: 20px;
 }
 .lista-veiculos li {
-    list-style: none;
     max-width: 30%;
+    list-style-type: none;
 }
 .lista-veiculos li img {
     max-width: 100%;
@@ -139,6 +139,7 @@ form button {
 }
 footer li {
     margin-left: 16px;
+    list-style-type: none;
 }
 footer li img {
     height: 32px;
