@@ -23,7 +23,7 @@ header, footer {
     background-color: #192a56;
     padding-top: 16px;
     color: #fff;
-} 
+}
 header {
     position: sticky;
     top: 0;
@@ -76,6 +76,9 @@ section {
 
 section h2 {
     margin-bottom: 16px;
+    font-size: 24px;
+    text-align: center;
+    color: #192a56;
 }
 .lista-veiculos {
     flex-wrap: wrap;
@@ -104,6 +107,10 @@ button {
     cursor: pointer;
     border-radius: 5px;
 }
+button:hover {
+    background: linear-gradient(135deg, #119759, #192a56);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
 .price {
     margin: 16px 0;
     display: block;
@@ -118,24 +125,52 @@ button {
 .form-campo label {
     font-weight: bold;
     display: block;
+    margin-bottom: 8px;
+    color: #192a56;
 }
 .form-campo input, .form-campo textarea {
     width: 100%;
-    display: block;
-    padding: 8px;
+    padding: 12px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    box-shadow: inset 0px 2px 5px rgba(0, 0, 0, 0.1);
+    background: #f5f6fa;
+    color: #333;
 }
 .form-campo textarea{
     resize: none;
-    height: 120px;
+    height: 150px;
 }
 form {
-    max-width: 360px;
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background: linear-gradient(135deg, #575fcf, #119759);
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1);
+    color: #fff;
 }
 form input {
     outline: none;
 }
 form button {
     max-width: 120px;
+    margin: 0 auto;
+    padding: 12px 0;
+    border-radius: 5px;
+    border: none;
+    background: linear-gradient(135deg, #192a56, #119759);
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+form button:hover {
+    background: linear-gradient(135deg, #119759, #192a56);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
 }
 footer li {
     margin-left: 16px;
